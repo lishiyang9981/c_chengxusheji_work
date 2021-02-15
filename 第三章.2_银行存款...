@@ -1,0 +1,17 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+//第三章.2_银行存款...
+int main()
+{
+	int bj = 1000;
+	int n = 5;
+	float r1 = 0.015, r2 = 0.021, r3 = 0.0275, r5 = 0.03, r0 = 0.0035;
+	float p1 = bj * (1 + 5 * r5);//一次存五年
+	float p2 = (bj * (1 + 2 * r2)) * (1 + 3 * r3);//先存2年，到期后将本息再存3年
+	float p3 = (bj * (1 + 3*r3)) * (1 + 2*r2);//先存3年，到期后将本息再存2年
+	float p4 = bj * pow((1 + r1), 5);//存期1年，到期后将本息再存1年，连续存5次
+	float p5 = bj * pow((1 + r0 / 4), 4 * n);//存活期存款。活期利息每一季度结算一次
+	printf("%.2f\n%.2f\n%.2f\n%.2f\n%.2f\n",p1,p2,p3,p4,p5);//结果保留两位小数
+	return 0;
+}

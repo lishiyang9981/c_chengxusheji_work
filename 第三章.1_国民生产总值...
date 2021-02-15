@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+//第三章.1_国民生产总值...
+int main()
+{
+	float r = 0.07;
+	float p = 1.0;
+	int n = 10;
+	p = pow(1 + r, 10);//通过pow函数直接运算次方
+
+	//for (n = 0; n < 10; n++)//通过循环运算次方
+	//{
+	//	p = p*(1 + r);
+	//}
+	printf("%f\n",p);
+	
+	return 0;
+}

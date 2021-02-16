@@ -1,0 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+//第三章.3_银行贷款
+int main()
+{
+	int d = 300000;
+	int p = 6000;
+	float r = 0.01;
+	float m = (log((p) / (p - d * r))) / (log(1 + r));//log为c库函数 需要引用头文件math.h
+	printf("%.1f", m);//保留一位小数，第二位小数则会自动进行四舍五入
+	return 0;
+}
